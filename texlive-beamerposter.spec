@@ -1,3 +1,9 @@
+# revision 17066
+# category Package
+# catalog-ctan /macros/latex/contrib/beamerposter
+# catalog-date 2010-02-16 13:45:15 +0100
+# catalog-license lppl
+# catalog-version 1.07
 Name:		texlive-beamerposter
 Version:	1.07
 Release:	1
@@ -50,6 +56,7 @@ portrait or landscape; - a 'debug mode' is provided.
 %doc %{_texmfdistdir}/doc/latex/beamerposter/beamerposter.pdf
 %doc %{_texmfdistdir}/doc/latex/beamerposter/beamerposter.tex
 %doc %{_texmfdistdir}/doc/latex/beamerposter/example.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -60,3 +67,5 @@ portrait or landscape; - a 'debug mode' is provided.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
