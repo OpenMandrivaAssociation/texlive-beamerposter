@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 The package enables the user to use beamer style operations on
@@ -34,20 +32,12 @@ still applicable to custom beamer slides, e.g. 16:9 slides for
 a wide-screen (i.e. 1.78 aspect ratio); - orientation may be
 portrait or landscape; - a 'debug mode' is provided.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -57,7 +47,6 @@ portrait or landscape; - a 'debug mode' is provided.
 %doc %{_texmfdistdir}/doc/latex/beamerposter/beamerposter.pdf
 %doc %{_texmfdistdir}/doc/latex/beamerposter/beamerposter.tex
 %doc %{_texmfdistdir}/doc/latex/beamerposter/example.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -68,5 +57,3 @@ portrait or landscape; - a 'debug mode' is provided.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
