@@ -6,7 +6,7 @@
 # catalog-version 1.07
 Name:		texlive-beamerposter
 Version:	1.07
-Release:	9
+Release:	10
 Summary:	Extend beamer and a0poster for custom sized posters
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/beamerposter
