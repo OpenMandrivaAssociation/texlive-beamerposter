@@ -5,7 +5,7 @@
 # catalog-license lppl
 # catalog-version 1.07
 Name:		texlive-beamerposter
-Version:	1.12
+Version:	1.13
 Release:	1
 Summary:	Extend beamer and a0poster for custom sized posters
 Group:		Publishing
