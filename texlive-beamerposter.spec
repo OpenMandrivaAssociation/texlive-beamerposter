@@ -5,8 +5,8 @@ Summary:	Extend beamer and a0poster for custom sized posters
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/beamerposter
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamerposter.r54512.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamerposter.doc.r54512.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamerposter.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamerposter.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
