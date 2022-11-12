@@ -1,18 +1,12 @@
-# revision 17066
-# category Package
-# catalog-ctan /macros/latex/contrib/beamerposter
-# catalog-date 2010-02-16 13:45:15 +0100
-# catalog-license lppl
-# catalog-version 1.07
 Name:		texlive-beamerposter
-Version:	1.13
-Release:	2
+Version:	54512
+Release:	1
 Summary:	Extend beamer and a0poster for custom sized posters
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/beamerposter
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamerposter.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamerposter.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamerposter.r54512.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamerposter.doc.r54512.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -33,42 +27,24 @@ a wide-screen (i.e. 1.78 aspect ratio); - orientation may be
 portrait or landscape; - a 'debug mode' is provided.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/beamerposter/beamerposter.sty
-%doc %{_texmfdistdir}/doc/latex/beamerposter/README
-%doc %{_texmfdistdir}/doc/latex/beamerposter/beamerposter.pdf
-%doc %{_texmfdistdir}/doc/latex/beamerposter/beamerposter.tex
-%doc %{_texmfdistdir}/doc/latex/beamerposter/example.tex
+%{_texmfdistdir}/tex/latex/beamerposter
+%doc %{_texmfdistdir}/doc/latex/beamerposter
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.07-2
-+ Revision: 749530
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.07-1
-+ Revision: 717898
-- texlive-beamerposter
-- texlive-beamerposter
-- texlive-beamerposter
-- texlive-beamerposter
-- texlive-beamerposter
-
