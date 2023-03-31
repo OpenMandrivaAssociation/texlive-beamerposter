@@ -1,6 +1,6 @@
 Name:		texlive-beamerposter
 Version:	54512
-Release:	1
+Release:	2
 Summary:	Extend beamer and a0poster for custom sized posters
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/beamerposter
