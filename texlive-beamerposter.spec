@@ -3,7 +3,7 @@ Version:	54512
 Release:	2
 Summary:	Extend beamer and a0poster for custom sized posters
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/beamerposter
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/beamerposter
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamerposter.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamerposter.doc.r%{version}.tar.xz
